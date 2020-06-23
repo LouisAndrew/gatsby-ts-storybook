@@ -20,7 +20,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "serve": "gatsby serve",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "NODE_ENV=test start-storybook -p 6006",
     "clean": "gatsby clean",
     "build": "gatsby build",
     "build:storybook": "build-storybook",
@@ -48,7 +48,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
+    "@babel/runtime": "^7.10.3",
+    "@storybook/addon-a11y": "^5.3.19",
     "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-info": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.14",
     "@storybook/addon-links": "^5.3.14",
     "@storybook/addons": "^5.3.14",
@@ -67,6 +70,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.7",
     "babel-preset-gatsby": "^0.2.31",
+    "babel-preset-react-app": "^9.1.2",
     "eslint": "^6.8.0",
     "eslint-config-gojutin": "0.0.16",
     "eslint-config-prettier": "^6.10.0",
@@ -83,10 +87,14 @@
     "jest-styled-components": "^7.0.0",
     "npm-check-updates": "^4.0.4",
     "prettier": "^1.19.1",
+    "storybook-addon-smart-knobs": "^6.0.2",
     "ts-jest": "^25.2.1",
     "tslint": "^6.0.0",
     "tslint-immutable": "^6.0.1",
     "tslint-react": "^4.2.0",
     "typescript": "^3.8.3"
+  },
+  "resolutions": {
+    "**/@babel/runtime": "7.5.0"
   }
 }
